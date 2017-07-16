@@ -11,6 +11,7 @@
 |
 */
 /*Route::auth();*/
+// Hello from RIVNEOBLENERGO!!!
 
 Route::get('/', 'ChangeController@index');
 Route::get('/changeView/{id}', 'ChangeController@view');
