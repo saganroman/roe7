@@ -32,7 +32,8 @@ class ChangeController extends Controller
 	 */
 	public function create()
 	{
-		return view('changeAdd');
+		$branches = Branch::all();
+		return view('changeAdd')->withBranches($branches);
 	}
 
 	/**

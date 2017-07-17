@@ -14,11 +14,9 @@
         <input class="form-control" id="number_give" name="number_give" placeholder="Номер виданого">
         Відділ
         <select class="form-control" name="branch_id" required>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+            @foreach($branches as $branch )
+                <option value="{{$branch->id}}">{{$branch->name}}</option>
+            @endforeach
         </select>
         Кому
         <input class="form-control" id="employee" name="employee" placeholder="Кому" required>
