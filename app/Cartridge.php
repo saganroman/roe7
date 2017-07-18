@@ -11,6 +11,7 @@ class Cartridge extends Model
 
 	public function State()
 	{
-		return $this->hasMany('App\State');
+		return $this->belongsTo('App\State');
+		//return $this->hasMany('App\State');
 	}
 }

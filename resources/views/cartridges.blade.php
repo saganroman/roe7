@@ -23,7 +23,7 @@
                 <td>{{$cartridge->vendor}}</td>
                 <td>{{$cartridge->model}}</td>
                 <td>{{$cartridge->roe_number}}</td>
-                <td>{{$cartridge->state_id}}</td>
+                <td>{{$cartridge->state->name}}</td>
                 <td><a href="{{url('/')}}/cartridgeDelete/{{$cartridge->id}}"><img
                                 src="{{ URL::asset('/images/delete.jpg') }}" width="20px"
                                 height="20px"></a></td>
