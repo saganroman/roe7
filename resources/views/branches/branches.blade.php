@@ -8,12 +8,15 @@
         <br>
     </a> <br><br>
     <table id="DataTable" class="table table-bordered">
+        <thead>
         <tr>
             <th>Id</th>
             <th>Назва</th>
             <th></th>
             <th></th>
         </tr>
+        </thead>
+        <tbody>
         @foreach($branches as $branch)
             <tr>
                 <td><a href="{{url('/')}}/branchView/{{$branch->id}}">{{$branch->id}}</a></td>
@@ -28,5 +31,6 @@
 
             </tr>
         @endforeach
+        </tbody>
     </table>
 @endsection

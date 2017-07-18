@@ -7,7 +7,8 @@
         <button type="button" class="btn btn-primary flright">Додати поле</button>
         <br>
     </a> <br><br>
-    <table id="DataTable" class="table table-bordered">
+    <table id="DataTable" data-order='[[ 0, "desc" ]]' class="table table-bordered">
+        <thead>
         <tr>
             <th>Дата отримання</th>
             <th>Номер отриманого</th>
@@ -18,6 +19,8 @@
             <th></th>
             <th></th>
         </tr>
+        </thead>
+        <tbody>
         @foreach($changes as $change)
             <tr>
                 <td><a href="{{url('/')}}/changeView/{{$change->id}}">{{$change->date_get}}</a></td>
@@ -35,5 +38,6 @@
 
             </tr>
         @endforeach
+        </tbody>
     </table>
 @endsection

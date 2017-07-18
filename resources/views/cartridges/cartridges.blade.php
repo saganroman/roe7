@@ -8,6 +8,7 @@
         <br>
     </a> <br><br>
     <table id="DataTable" class="table table-bordered">
+        <thead>
         <tr>
             <th>Id</th>
             <th>Виробник</th>
@@ -17,6 +18,8 @@
             <th></th>
             <th></th>
         </tr>
+        </thead>
+        <tbody>
         @foreach($cartridges as $cartridge)
             <tr>
                 <td><a href="{{url('/')}}/cartridgeView/{{$cartridge->id}}">{{$cartridge->id}}</a></td>
@@ -33,5 +36,6 @@
 
             </tr>
         @endforeach
+        </tbody>
     </table>
 @endsection

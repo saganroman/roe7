@@ -10,6 +10,7 @@ use App\Http\Requests;
 use App\Change;
 use App\Cartridge;
 use App\Branch;
+use App\Service;
 use DB;
 
 class ChangeController extends Controller
@@ -21,6 +22,7 @@ class ChangeController extends Controller
 	 */
 	public function index()
 	{
+//		$changes = Change::orderBy('date_get', 'desc')->get();
 		$changes = Change::all();
 		return view('changes.change')->withChanges($changes);
 	}
@@ -53,7 +55,11 @@ class ChangeController extends Controller
 		$change->employee = $request->employee;
 		$change->note = $request->note;
 		$change->save();
-		return redirect('/changeAdd');
+		$service = new Service();
+		$service->cart_id = 5;
+		$service->date_give = $change->date_give;
+		$service->save();
+		return redirect('/');
 
 	}
 

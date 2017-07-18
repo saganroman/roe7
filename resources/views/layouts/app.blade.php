@@ -8,13 +8,18 @@
     <link rel="stylesheet" href={{ URL::asset('css/style.css') }} />
     <link rel="stylesheet" href={{ URL::asset('css/bootstrap.css') }} />
     <link rel="stylesheet" href={{ URL::asset('css/bootstrap-theme.min.css') }} />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"/>
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet"
           type="text/css"/>
 
 
     <script type="text/javascript" src={{ URL::asset('js/jquery-3.2.1.js') }}></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src={{ URL::asset('js/bootstrap.min.js') }}></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src={{ URL::asset('js/script.js') }}></script>
+
 </head>
 <body>
 <div class="main">
