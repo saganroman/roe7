@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Branch;
 
 class BranchController extends Controller
 {
@@ -15,7 +16,8 @@ class BranchController extends Controller
 	 */
 	public function index()
 	{
-		//
+		$branches = Branch::all();
+		return view('branches.branches')->withBranches($branches);
 	}
 
 	/**
@@ -25,7 +27,7 @@ class BranchController extends Controller
 	 */
 	public function create()
 	{
-		//
+		return view('branches.branchAdd');
 	}
 
 	/**
@@ -36,7 +38,10 @@ class BranchController extends Controller
 	 */
 	public function store(Request $request)
 	{
-		//
+		$branch = new Branch;
+		$branch->name = $request->name;
+		$branch->save();
+		return redirect('/branches');
 	}
 
 	/**
@@ -58,7 +63,9 @@ class BranchController extends Controller
 	 */
 	public function edit($id)
 	{
-		//
+		$data = Branch::find($id);
+
+		return view('branches.branchEdit')->withData($data);
 	}
 
 	/**
@@ -70,7 +77,11 @@ class BranchController extends Controller
 	 */
 	public function update(Request $request, $id)
 	{
-		//
+		$branch = Branch::find($id);
+		$branch->name = $request->name;
+
+		$branch->save();
+		return redirect('/branches');
 	}
 
 	/**
@@ -81,6 +92,7 @@ class BranchController extends Controller
 	 */
 	public function destroy($id)
 	{
-		//
+		Branch::destroy($id);
+		return redirect('/branches');
 	}
 }

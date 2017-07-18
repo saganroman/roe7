@@ -12,7 +12,13 @@
         <input class="form-control" name="roe_number" id="roe_number" placeholder="РОЕ номер"
                value="{{$data->roe_number}}" onkeyup="liveSearch">
         Стан:
-        <input class="form-control" id="state_id" name="state_id" placeholder="Стан" value="{{$data->state_id}}">
+        <select class="form-control" id="state_id" name="state_id" required>
+            <option value="{{$data->state->id}}">{{$data->state->name}}</option>
+            @foreach($states as $state)
+                <option value="{{$state->id}}">{{$state->name}}</option>
+            @endforeach
+        </select>
+
 
         Примітка<br>
         <textarea class="form-control" rows="3" name="note">{{$data->note}}</textarea> <br>

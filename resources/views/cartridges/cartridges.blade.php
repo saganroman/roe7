@@ -7,7 +7,7 @@
         <button type="button" class="btn btn-primary flright">Додати</button>
         <br>
     </a> <br><br>
-    <table class="table table-bordered">
+    <table id="DataTable" class="table table-bordered">
         <tr>
             <th>Id</th>
             <th>Виробник</th>

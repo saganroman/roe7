@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Cartridge;
+use App\State;
 
 class CartridgeController extends Controller
 {
@@ -17,7 +18,7 @@ class CartridgeController extends Controller
 	public function index()
 	{
 		$cartridges = Cartridge::all();
-		return view('cartridges')->withCartridges($cartridges);
+		return view('cartridges.cartridges')->withCartridges($cartridges);
 	}
 
 	/**
@@ -27,7 +28,7 @@ class CartridgeController extends Controller
 	 */
 	public function create()
 	{
-		return view('cartridgeAdd');
+		return view('cartridges.cartridgeAdd');
 	}
 
 	/**
@@ -68,7 +69,8 @@ class CartridgeController extends Controller
 	public function edit($id)
 	{
 		$data = Cartridge::find($id);
-		return view('cartridgeEdit')->withData($data);
+		$states = State::all();
+		return view('cartridges.cartridgeEdit')->withData($data)->withStates($states);
 	}
 
 	/**

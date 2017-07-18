@@ -11,7 +11,7 @@
 |
 */
 /*Route::auth();*/
-// Hello from RIVNEOBLENERGO!!!
+
 
 Route::get('/', 'ChangeController@index');
 Route::get('/changeView/{id}', 'ChangeController@view');
@@ -29,4 +29,11 @@ Route::get('/cartridgeStore', 'CartridgeController@store');
 Route::get('/cartridgeEdit/{id}', 'CartridgeController@edit');
 Route::get('/cartridgeUpdate/{id}', 'CartridgeController@update');
 Route::get('/cartridgeDelete/{id}', 'CartridgeController@destroy');
+
+Route::get('/branches', 'BranchController@index');
+Route::get('/branchStore', 'BranchController@store');
+Route::get('/branchAdd', 'BranchController@create');
+Route::get('/branchEdit/{id}', 'BranchController@edit');
+Route::get('/branchUpdate/{id}', 'BranchController@update');
+Route::get('/branchDelete/{id}', 'BranchController@destroy');
 

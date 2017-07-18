@@ -7,7 +7,7 @@
         <button type="button" class="btn btn-primary flright">Додати поле</button>
         <br>
     </a> <br><br>
-    <table class="table table-bordered">
+    <table id="DataTable" class="table table-bordered">
         <tr>
             <th>Дата отримання</th>
             <th>Номер отриманого</th>

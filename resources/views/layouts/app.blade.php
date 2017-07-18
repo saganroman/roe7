@@ -27,9 +27,9 @@
         <div class="menu_nav">
             <ul>
                 <li><a href="{{ URL::asset('/cartridges') }}">Картриджі</a></li>
-                <li><a href="{{ URL::asset('/cartridges') }}">Обмін </a></li>
-                <li><a href="{{ URL::asset('/cartridges') }}">Сервіс</a></li>
-                <li><a href="{{ URL::asset('/cartridges') }}">Підрозділи</a></li>
+                <li><a href="{{ URL::asset('/') }}">Обмін </a></li>
+                <li><a href="{{ URL::asset('/service') }}">Сервіс</a></li>
+                <li><a href="{{ URL::asset('/branches') }}">Підрозділи</a></li>
 
             </ul>
             <div class="clr"></div>
@@ -54,8 +54,8 @@
                     <ul class="sb_menu">
                         <li><a href="{{ URL::asset('/cartridges') }}">Картриджі</a></li>
                         <li><a href="{{ URL::asset('/') }}">Обмін</a></li>
-                        <li><a href="{{ URL::asset('/cartridges') }}">Сервіс</a></li>
-                        <li><a href="{{ URL::asset('/cartridges') }}">Підрозділис</a></li>
+                        <li><a href="{{ URL::asset('/service') }}">Сервіс</a></li>
+                        <li><a href="{{ URL::asset('/branches') }}">Підрозділис</a></li>
                         <li><a href="http://www.vsei.com.ua">Сайт компанії</a></li>
                         <li><a href="portal.roe.vsei.ua">Внутрішній портал</a></li>
 

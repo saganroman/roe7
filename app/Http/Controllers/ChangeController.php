@@ -22,7 +22,7 @@ class ChangeController extends Controller
 	public function index()
 	{
 		$changes = Change::all();
-		return view('change')->withChanges($changes);
+		return view('changes.change')->withChanges($changes);
 	}
 
 	/**
@@ -33,7 +33,7 @@ class ChangeController extends Controller
 	public function create()
 	{
 		$branches = Branch::all();
-		return view('changeAdd')->withBranches($branches);
+		return view('changes.changeAdd')->withBranches($branches);
 	}
 
 	/**
@@ -82,7 +82,7 @@ class ChangeController extends Controller
 	) {
 		$data = Change::find($id);
 		$branches = Branch::all();
-		return view('changeEdit')->withData($data)->withBranches($branches);
+		return view('changes.changeEdit')->withData($data)->withBranches($branches);
 	}
 
 	/**
