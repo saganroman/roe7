@@ -7,11 +7,13 @@
         Дата отримання:
         <input type="date" class="form-control" id="date_get" name="date_get" placeholder="Дата отримання" required>
         Номер отриманого
-        <input class="form-control" id="number_get" name="number_get" placeholder="Номер отриманого" required>
+        <input class="form-control" id="number_get" name="number_get" placeholder="Номер отриманого" required
+               onkeyup="getNumbers(this)">
         Дата видачі
         <input type="date" class="form-control" name="date_give" id="date_give" placeholder="Дата видачі">
         Номер виданого
-        <input class="form-control" id="number_give" name="number_give" placeholder="Номер виданого">
+        <input class="form-control" id="number_give" name="number_give" placeholder="Номер виданого"
+               onkeyup="getNumbers(this)">
         Відділ
         <select class="form-control" name="branch_id" required>
             @foreach($branches as $branch )

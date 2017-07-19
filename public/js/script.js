@@ -1,7 +1,21 @@
-/**
- * Created by 777 on 18.07.2017.
- */
+function getNumbers(number) {
+	var inputValue = number.value;
+	var inputName = '#' + number.id;
+
+	$.ajax({
+		url: "http://localhost/roe/public/changeAutocomplete/" + inputValue,
+		cache: false,
+		success: function (numbers) {
+			$(inputName).autocomplete({
+				source: JSON.parse(numbers),
+				delay: 500,
+			});
+		}
+	});
+};
 $(document).ready(function () {
+
+
 	$('#DataTable').DataTable({
 		"pagingType": "full_numbers",
 		language: {

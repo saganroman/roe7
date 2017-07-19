@@ -38,7 +38,7 @@
                value="{{$data->date_give}}">
         Номер виданого
         <input class="form-control" id="number_give" name="number_give" placeholder="Номер виданого"
-               value="{{$data->number_give}}">
+               value="{{$data->number_give}}" onkeyup="getNumbers(this.value)">
         Відділ
         <select class="form-control" name="branch_id" required>
             <option value="{{$data->branch->id}}">{{$data->branch->name}}</option>
