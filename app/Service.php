@@ -12,5 +12,6 @@ class Service extends Model
 	public function Cartridge()
 	{
 		return $this->belongsTo('App\Cartridge');
+		//return $this->hasMany('App\Cartridge');
 	}
 }

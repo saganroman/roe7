@@ -17,7 +17,6 @@ class ServiceController extends Controller
 	public function index()
 	{
 		$data = Service::all();
-
 		return view('service.service')->withServices($data);
 	}
 
@@ -74,7 +73,15 @@ class ServiceController extends Controller
 	 */
 	public function update(Request $request, $id)
 	{
-		//
+		$service = Service::find($id);
+
+		$service->date_get = $request->date_get;
+		$service->service = $request->service;
+		$service->work = $request->work;
+		$service->price = $request->price;
+		$service->note = $request->note;
+		$service->save();
+		return redirect('/service');
 	}
 
 	/**

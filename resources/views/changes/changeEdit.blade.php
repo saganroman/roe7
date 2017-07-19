@@ -3,28 +3,6 @@
 @section ('title')Додати обмін картриджів @endsection
 @section('data')
 
-    <script>
-        function getNumbers(number) {
-            var r = number;
-            $.ajax({
-                url: "{!!URL::asset("/changeAutocomplete") !!}/" + r,
-                cache: false,
-
-                success: function (numbers) {
-
-                    $('#number_get').autocomplete({
-                        source: JSON.parse(numbers),
-                        delay: 500,
-                        //minLength: 2,
-                    });
-
-
-                }
-            });
-        }
-        ;
-
-    </script>
     <h2>Редагувати:</h2>
     <form action="{{url('/')}}/changeUpdate/{{$data->id}}" method="GET">
         Дата отримання:

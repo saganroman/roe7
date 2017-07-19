@@ -5,8 +5,10 @@
 
     <h2>Редагувати:</h2>
     <form action="{{url('/')}}/serviceUpdate/{{$data->id}}" method="GET">
+        <input hidden name="cartridge_id" value="{{$data->cartridge->id}}">
+
         Номер картриджа
-        <input class="form-control" id="cart_id" name="cart_id" placeholder="Номер картриджа"
+        <input class="form-control" id="cart_id" placeholder="Номер картриджа"
                value="{{$data->cartridge->roe_number}}">
         Дата відправки:
         <input type="date" class="form-control" id="date_give" name="date_give" placeholder="Дата відправки"

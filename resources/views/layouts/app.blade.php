@@ -49,52 +49,52 @@
     </div>
 
     <div class="content">
-        <div class="content_bg">
-            <div class="mainbar">@yield('data') </div>
-            <div class="sidebar">
+        <div class="content_bg">@yield('data')
+            {{--  <div class="mainbar"> </div>
+              <div class="sidebar">
 
-                <div class="gadget">
-                    <h2><span>Основне</span> меню</h2>
-                    <div class="clr"></div>
-                    <ul class="sb_menu">
-                        <li><a href="{{ URL::asset('/cartridges') }}">Картриджі</a></li>
-                        <li><a href="{{ URL::asset('/') }}">Обмін</a></li>
-                        <li><a href="{{ URL::asset('/service') }}">Сервіс</a></li>
-                        <li><a href="{{ URL::asset('/branches') }}">Підрозділис</a></li>
-                        <li><a href="http://www.vsei.com.ua">Сайт компанії</a></li>
-                        <li><a href="portal.roe.vsei.ua">Внутрішній портал</a></li>
+                  <div class="gadget">
+                      <h2><span>Основне</span> меню</h2>
+                      <div class="clr"></div>
+                      <ul class="sb_menu">
+                          <li><a href="{{ URL::asset('/cartridges') }}">Картриджі</a></li>
+                          <li><a href="{{ URL::asset('/') }}">Обмін</a></li>
+                          <li><a href="{{ URL::asset('/service') }}">Сервіс</a></li>
+                          <li><a href="{{ URL::asset('/branches') }}">Підрозділис</a></li>
+                          <li><a href="http://www.vsei.com.ua">Сайт компанії</a></li>
+                          <li><a href="portal.roe.vsei.ua">Внутрішній портал</a></li>
 
-                    </ul>
-                </div>
-                <div class="gadget">
-                    <h2><span>Корисні сторінки</span></h2>
-                    <div class="clr"></div>
-                    <ul class="ex_menu">
-                        <li class="active"><a href="http://www.hp.com/" title="Hewlett-Packard">Hewlett-Packard</a>
-                            <span>Світовий лідер у виробництві оргтехніки</span></li>
-                        <li><a href="http://www.canon.com" title="Canon">Canon</a> <span>Один зі світових лідерів в області створення цифрового обладнання</span>
-                        </li>
-                        <li><a href="http://www.xerox.com" title="Xerox">Xerox</a> <span>Oдин з світових лідерів в області технологій друку</span>
-                        </li>
-                        <li><a href="http://www.brother.ru/" title="Brother">Brother</a> <span>Японський виробник побутової техніки</span>
-                        </li>
-                        <li><a href="http://www.samsung.com" title="Samsung Electronics">Samsung </a> <span>Компанія-виробник електроніки</span>
-                        </li>
-                        <li><a href="http://www.sharp-world.com/" title="Sharp Global">Sharp </a> <span>Японська корпорація, виробник електроніки</span>
-                        </li>
-                    </ul>
-                </div>
-                <!--<div class="gadget">
-                  <h2 class="grey"><span>Wise Words</span></h2>
-                  <div class="clr"></div>
-                  <div class="testi">
-                    <p><span class="q"><img src="images/quote_1.gif" width="16" height="14" alt="quote" /></span> We can let circumstances rule us, or we can take charge and rule our lives from within. <span class="q"><img src="images/quote_2.gif" width="16" height="14" alt="quote" /></span></p>
-                    <p class="title"><strong>Earl Nightingale</strong></p>
+                      </ul>
                   </div>
-                </div>-->
-            </div>
+                  <div class="gadget">
+                      <h2><span>Корисні сторінки</span></h2>
+                      <div class="clr"></div>
+                      <ul class="ex_menu">
+                          <li class="active"><a href="http://www.hp.com/" title="Hewlett-Packard">Hewlett-Packard</a>
+                              <span>Світовий лідер у виробництві оргтехніки</span></li>
+                          <li><a href="http://www.canon.com" title="Canon">Canon</a> <span>Один зі світових лідерів в області створення цифрового обладнання</span>
+                          </li>
+                          <li><a href="http://www.xerox.com" title="Xerox">Xerox</a> <span>Oдин з світових лідерів в області технологій друку</span>
+                          </li>
+                          <li><a href="http://www.brother.ru/" title="Brother">Brother</a> <span>Японський виробник побутової техніки</span>
+                          </li>
+                          <li><a href="http://www.samsung.com" title="Samsung Electronics">Samsung </a> <span>Компанія-виробник електроніки</span>
+                          </li>
+                          <li><a href="http://www.sharp-world.com/" title="Sharp Global">Sharp </a> <span>Японська корпорація, виробник електроніки</span>
+                          </li>
+                      </ul>
+                  </div>
+                  <!--<div class="gadget">
+                    <h2 class="grey"><span>Wise Words</span></h2>
+                    <div class="clr"></div>
+                    <div class="testi">
+                      <p><span class="q"><img src="images/quote_1.gif" width="16" height="14" alt="quote" /></span> We can let circumstances rule us, or we can take charge and rule our lives from within. <span class="q"><img src="images/quote_2.gif" width="16" height="14" alt="quote" /></span></p>
+                      <p class="title"><strong>Earl Nightingale</strong></p>
+                    </div>
+                  </div>-->
+              </div>
 
-            <div class="clr"></div>
+              <div class="clr"></div>--}}
         </div>
     </div>
     <div class="fbg">

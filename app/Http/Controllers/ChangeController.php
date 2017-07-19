@@ -48,16 +48,18 @@ class ChangeController extends Controller
 	{
 		$change = new Change;
 		$change->date_get = $request->date_get;
-		$change->number_get = $request->number_get;
+		$change->number_get = Cartridge::where('roe_number', $request->number_get)->get()[0]['id'];
 		$change->date_give = $request->date_give;
-		$change->number_give = $request->number_give;
+		$change->number_give = Cartridge::where('roe_number',
+			$request->number_get)->get()[0]['id'] ? Cartridge::where('roe_number',
+			$request->number_get)->get()[0]['id'] : 0;
 		$change->branch_id = $request->branch_id;
 		$change->employee = $request->employee;
 		$change->note = $request->note;
 		$change->save();
 		$service = new Service();
-		$service->cart_id = 5;
-		$service->date_give = $change->date_give;
+		$service->cartridge_id = Cartridge::where('roe_number', $request->number_get)->get()[0]['id'];
+		$service->date_give = $request->date_give;
 		$service->save();
 		return redirect('/');
 

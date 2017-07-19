@@ -18,6 +18,6 @@ class Cartridge extends Model
 	public function Service()
 	{
 		return $this->hasMany('App\Service');
-		//return $this->hasMany('App\State');
+		//return $this->belongsTo('App\State');
 	}
 }
