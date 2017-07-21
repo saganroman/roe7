@@ -17,7 +17,9 @@
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src={{ URL::asset('js/bootstrap.min.js') }}></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-
+    <script type="text/javascript" src={{ URL::asset('js/moment.js') }}></script>
+    <script type="text/javascript" src={{ URL::asset('js/parsley.js') }}></script>
+    <script type="text/javascript" src={{ URL::asset('js/jquery.mask.js') }}></script>
     <script type="text/javascript" src={{ URL::asset('js/script.js') }}></script>
 
 </head>

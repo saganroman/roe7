@@ -41,4 +41,55 @@ $(document).ready(function () {
 			}
 		}
 	});
+
+	$('#price').mask('999.99грн');
+	setTimeout(function () {
+		$('#flash_mess').css('display', 'none');
+	}, 5000);
+
+	/*$("input[name='date_give']").change(function () {
+	 var date_get = $("input[name='date_get']").val();
+	 var date_give = $("input[name='date_give']").val();
+
+	 var r=moment(date_get).isAfter(moment(date_give));
+
+	 r?alert("Неправильно задана дата"):alert("Все ок");
+
+	 ;
+	 });*/
+// $('.mySelectCalendar').datepicker({ firstDay: 1, dateFormat: "dd.mm.yy" });
+
+
+	/*	window.Parsley
+	 .addValidator('dateformat', {
+	 validate: function() {
+	 var date_get = $("input[name='date_get']").val();
+	 var date_give = $("input[name='date_give']").val();
+
+	 if(moment(date_get).isAfter(moment(date_give))){
+	 return 0;
+
+	 };
+
+
+
+	 },
+	 messages: {
+	 en: 'This value should be a multiple of %s',
+	 fr: 'Cette valeur doit être un multiple de %s'
+	 }
+	 });*/
+
+	window.Parsley.addValidator('dateformat',
+		function (value, requirement) {
+			var date_get = $("input[name='date_get']").val();
+			var date_give = $("input[name='date_give']").val();
+
+			if (moment(date_get).isAfter(moment(date_give))) {
+				return 0;
+
+			}
+			;
+		}, 32)
+		.addMessage('en', 'myvalidator', 'my validator failed');
 });

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Branch;
+use Illuminate\Support\Facades\Session;
 
 class BranchController extends Controller
 {
@@ -38,10 +39,14 @@ class BranchController extends Controller
 	 */
 	public function store(Request $request)
 	{
+		$this->validate($request, [
+			'name' => 'required|min:3',
+		]);
 		$branch = new Branch;
 		$branch->name = $request->name;
 		$branch->save();
-		return redirect('/branches');
+		Session::flash('success', 'Підрозділ успішно додано!');
+		return redirect('/branchAdd');
 	}
 
 	/**

@@ -2,6 +2,7 @@
 
 @section ('title')Додати обмін картриджів @endsection
 @section('data')
+
     <h2>Обмін картриджів:</h2>
     <form action="{{url('/')}}/changeStore" method="GET">
         Дата отримання:
@@ -25,4 +26,13 @@
 
         <button type="submit" class="btn btn-primary flright">Додати</button>
     </form>
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 @endsection

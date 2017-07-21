@@ -3,9 +3,11 @@
 @section ('title')Додати обмін картриджів @endsection
 @section('data')
     <h2>Обмін картриджів:</h2>
-    <form action="{{url('/')}}/changeStore" method="GET">
+    <form action="{{url('/')}}/changeStore" method="GET" id="123">
         Дата отримання:
-        <input type="date" class="form-control" id="date_get" name="date_get" placeholder="Дата отримання" required>
+        <input data-type="date" type="date" data-parsley-dateformat class="form-control" id="date_get" name="date_get"
+               placeholder="Дата отримання" data-required="true" data-error="Даун введи правильно дату!"
+               data-trigger="change">
         Номер отриманого
         <input class="form-control" id="number_get" name="number_get" placeholder="Номер отриманого" required
                onkeyup="getNumbers(this)">
